@@ -1,0 +1,66 @@
+/*--------- Header Top css -----------*/
+.header-top {
+    background: #033b4a;
+}
+.athenity-care-container {
+    list-style: none;
+}
+.athenity-care-container li {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 300;
+    margin-right: 30px;
+}
+.athenity-care-container li span {
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 5px;
+}
+.left-icon {
+    color: #00d6a3;
+    margin-right: 5px;
+}
+.social-icon {
+    color: #fff;
+    font-size: 13px;
+    margin: 0 8px;
+}
+button.regular-btn {
+    background: #00d6a3;
+    color: #fff;
+    padding: 15px 35px;
+    border: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+/*--------- Media Query -----------*/
+@media only screen and (min-width: 320px) and (max-width:575px) {
+    .header-top {
+        display: none;
+    }
+}
+@media only screen and (min-width: 575px) and (max-width:767px) {
+    .header-top {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width:991px) {
+    .header-top {
+        display: none;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width:1200px) {
+    .athenity-care-container p {
+        margin-right: 25px;
+    }
+    .social-icon {
+        margin: 0 5px;
+    }
+    button.regular-btn {
+        padding: 15px 30px;
+        margin-left: 15px;
+    }
+
+}
