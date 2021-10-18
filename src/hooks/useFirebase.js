@@ -1,5 +1,5 @@
 
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, FacebookAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, FacebookAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../firebase/firebase.init";
 
@@ -21,13 +21,13 @@ const useFirebase = () => {
         signInWithPopup(auth, googleProvider)
             .then((result) => {
                 setUser(result.user);
-                setError('')
+                setError('');
             }).catch((error) => {
-                setError(error.message)
+                setError(error.message);
             });
 
     }
-    // handle signin google
+    // handle signin facebook
     const signInFacebook = () => {
 
         const facebookProvider = new FacebookAuthProvider();
@@ -35,19 +35,48 @@ const useFirebase = () => {
         signInWithPopup(auth, facebookProvider)
             .then((result) => {
                 setUser(result.user);
-                setError('')
+                setError('');
             }).catch((error) => {
-                setError(error.message)
+                setError(error.message);
             });
+    }
 
+    // signin email password
+    const handleUserLogIn = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                setUser(result.user);
+                setError('');
+            })
+            .catch((error) => {
+                setError(error.message);
+            });
+    }
+
+    // create new user email password
+    const handleCreateNewUser = (email, password, name) => {
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                setUser(result.user);
+                setError('');
+                setUserName(name);
+            })
+            .catch((error) => {
+                setError(error.message);
+            });
+    }
+    // set user Nmae
+    const setUserName = (name) => {
+        updateProfile(auth.currentUser, {
+            displayName: name
+        })
     }
 
     // observe user state changed
-
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
-                setUser(user)
+                setUser(user);
             }
         });
 
@@ -58,20 +87,19 @@ const useFirebase = () => {
 
         signOut(auth).then(() => {
             setUser({});
-            setError('')
+            setError('');
         }).catch((error) => {
-            setError(error.message)
+            setError(error.message);
         });
 
     }
 
 
-
-
-
     return {
         signInUsignGoogle,
         signInFacebook,
+        handleCreateNewUser,
+        handleUserLogIn,
         logOut,
         user,
         error

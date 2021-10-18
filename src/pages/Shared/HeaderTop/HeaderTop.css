@@ -24,7 +24,7 @@
     font-size: 13px;
     margin: 0 8px;
 }
-button.regular-btn {
+.regular-btn {
     background: #00d6a3;
     color: #fff;
     padding: 15px 35px;

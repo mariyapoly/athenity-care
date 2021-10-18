@@ -1,9 +1,14 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import './Navigation.css'
 
 const Navigation = () => {
+
+    const { allContext } = useAuth() || {};
+    const { logOut, user } = allContext || {};
+
     return (
         // Navbar Start
         <Navbar expand="lg" sticky="top">
@@ -18,7 +23,11 @@ const Navigation = () => {
                         <NavLink activeClassName="acitve" to="/team">our doctor</NavLink>
                         <NavLink activeClassName="acitve" to="/blog">blog</NavLink>
                         <NavLink activeClassName="acitve" to="/contact">contact us</NavLink>
-                        <NavLink activeClassName="acitve" to="/login">login</NavLink>
+                        {
+                            user.email ? <div><span>{user.displayName}</span> <button onClick={logOut}>logout</button></div>
+                                :
+                                <NavLink activeClassName="acitve" to="/login">login</NavLink>
+                        }
                         <NavLink activeClassName="acitve" to="/signup">signup</NavLink>
                     </Nav>
                 </Navbar.Collapse>
