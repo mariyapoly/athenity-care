@@ -1,0 +1,198 @@
+.breadcrumb-bg {
+    background: url(../../images/breadcrumb-bg.png) no-repeat center;
+    background-size: cover;
+    padding: 154px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb-bg::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #033b4a;
+    opacity: 0.8;
+    z-index: -1;
+}
+h2.breadcrumb-title {
+    font-size: 55px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.breadcrumb a, .breadcrumb span {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.breadcrumb .active {
+    color: #00d6a3;
+}
+.single-service {
+    padding: 120px 0;
+}
+.single-service-thumb {
+    padding-right: 30px;
+}
+.single-service img {
+    width: 100%;
+}
+.single-service h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #033b4a;
+    margin-bottom: 20px;
+}
+
+.single-service p {
+    font-size: 16px;
+    line-height: 25px;
+    color: #9dabaf;
+    margin-bottom: 40px;
+    font-family: 'Open Sans', sans-serif; 
+}
+.single-service h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #033b4a;
+}
+.single-service ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.single-service ul li {
+    color: #9dabaf;
+    padding: 5px 0 5px 35px;
+    position: relative;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif; 
+}
+
+.check-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4px;
+    font-size: 13px;
+    font-weight: 100;
+    color: #033b4a;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.single-service .regular-btn {
+    margin: 0;
+}
+
+/*--------- Media Query -----------*/
+@media only screen and (min-width: 320px) and (max-width:575px) {
+    .breadcrumb-container {
+        flex-direction: column;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
+    .breadcrumb-title,.single-service h2  {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+    .breadcrumb-bg {
+        padding: 154px 0 60px;
+    }
+    .single-service {
+        padding: 60px 0;
+    }
+    .single-service-thumb {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .single-service p {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    .single-service h3 {
+        font-size: 22px;
+    }
+    .single-service ul li {
+        padding: 2px 0 2px 35px;
+        font-size: 16px;
+    }
+    .check-icon {
+        font-size: 12px;
+    }
+    
+}
+@media only screen and (min-width: 576px) and (max-width:767px) {
+    .breadcrumb-container {
+        flex-direction: column;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
+    h2.breadcrumb-title  {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+    .single-service h2 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .breadcrumb-bg {
+        padding: 154px 0 60px;
+    }
+    .single-service {
+        padding: 60px 0;
+    }
+    .single-service-thumb {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .single-service p {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    .single-service h3 {
+        font-size: 22px;
+    }
+    .single-service ul li {
+        padding: 2px 0 2px 35px;
+        font-size: 16px;
+    }
+    .check-icon {
+        font-size: 12px;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width:991px) { 
+    .breadcrumb-bg {
+        padding: 180px 0 100px;
+    }
+    h2.breadcrumb-title {
+        font-size: 40px;
+    }
+    .single-service {
+        padding: 80px 0;
+    }
+    .single-service-thumb {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width:1200px) { 
+    .single-service h2 {
+        font-size: 29px;
+    }
+    .single-service h3 {
+        font-size: 22px;
+    }
+    .single-service ul li {
+        font-size: 16px;
+    }
+}
+

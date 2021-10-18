@@ -1,0 +1,108 @@
+.service-area {
+    background: #f9fafa;
+    padding: 120px 0 90px;
+    
+}
+.service-thumb {
+    overflow: hidden;
+    height: 270px;
+}
+.service img {
+    width: 100%;
+    height: 270px;
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+}
+.service:hover img {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+.service {
+    box-shadow: 0 0 15px 0 rgb(41, 61, 88, 0.10);
+    margin: 0 5px 33px;
+}
+.service-container {
+    background-color: #fff;
+    padding: 23px 65px 30px 30px;
+}
+.service-container h4 {
+    color: #033b4a;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+.service-container p {
+    color: #9dabaf;
+    line-height: 25px;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+.service-container button {
+    border: 0;
+    background: no-repeat;
+    text-transform: uppercase;
+    color: #00d6a3;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+
+
+@media only screen and (min-width:320px) and (max-width:575px) { 
+    .service-area {
+        padding: 80px 0 50px; 
+    }
+    .service-container {
+        padding: 23px 20px 20px 20px;
+    }
+    .service-container p {
+        font-size: 14px;
+    }
+    .service-container button {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { 
+    .service-area {
+        padding: 80px 0 50px; 
+    }
+    .service-container {
+        padding: 23px 20px 20px 20px;
+    }
+    .service-container p {
+        font-size: 14px;
+    }
+    .service-container button {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { 
+    .service-area {
+        padding: 90px 0 60px; 
+    }
+    .service-container {
+        padding: 23px 20px 20px 20px;
+    }
+    .service-container p {
+        font-size: 14px;
+    }
+    .service-container button {
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width:992px) and (max-width:1200px) { 
+    .service-container {
+        padding: 23px 20px 30px 20px;
+    }
+    .service-container p {
+        font-size: 15px;
+    }
+}

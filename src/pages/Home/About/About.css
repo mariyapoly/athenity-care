@@ -5,22 +5,23 @@
 .about-container {
     padding-left: 45px;
 }
-.about-container span {
+.section-title span {
     color: #9dabaf;
     letter-spacing: 1px;
     margin-bottom: 10px;
     display: inline-block;
 }
-.about-container h2 {
+.section-title h2 {
     font-size: 35px;
     font-weight: 600;
     color: #033b4a;
     line-height: 42px;
     margin-bottom: 25px;
 }
-.about-container p {
+.about-container p, .section-title p{
     line-height: 25px;
     color: #9dabaf;
+    font-family: 'Open Sans', sans-serif;
 }
 .about-text {
     margin-bottom: 16px;
@@ -110,9 +111,12 @@
         margin-top: 30px;
         flex-direction: column;
     }
-    .about-container h2 {
+    .section-title h2 {
         font-size: 26px;
         line-height: 30px;
+    }
+    .about-container p, .section-title p {
+        font-size: 15px;
     }
     .about-inner{
         width: auto;
@@ -147,15 +151,18 @@
         margin-top: 30px;
         flex-direction: column;
     }
-    .about-container h2 {
+    .section-title h2 {
         font-size: 26px;
         line-height: 30px;
+    }
+    .about-container p, .section-title p {
+        font-size: 15px;
     }
     .about-inner{
         width: auto;
         margin-bottom: 15px;
     }
-    .about-inner p {
+    .about-inner p{
         font-size: 17px;
         padding-right: 0;
     }
@@ -165,7 +172,10 @@
     
 }
 
-@media only screen and (min-width:768px) and (max-width:991px) { 
+@media only screen and (min-width:768px) and (max-width:991px) {
+    .about-area {
+        padding: 90px 0;
+    } 
     .about-thumb {
         margin-bottom: 40px;
     }

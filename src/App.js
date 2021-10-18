@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from './pages/Login/Login';
 import NotFound from './pages/NotFound/NotFound';
 import AuthProvider from './context/AuthProvider';
+import SingleServices from './pages/SingleServices/SingleServices';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route path="/home">
             <Home></Home>
+          </Route>
+          <Route path="/service/:id">
+            <SingleServices></SingleServices>
           </Route>
           <Route path="/login">
             <Login></Login>

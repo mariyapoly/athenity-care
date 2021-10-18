@@ -9,6 +9,7 @@ import './About.css';
 
 const About = () => {
     return (
+        // About Area Start
         <div className="about-area">
             <Container>
                 <Row className="align-items-center">
@@ -23,9 +24,11 @@ const About = () => {
                     </Col>
                     <Col lg={6} sm={12} xs={12} md={12}>
                         <div className="about-container">
-                            <span>INTRODUCING</span>
-                            <h2>Tackle the challenge of delivering health care</h2>
-                            <p className="about-text">We provide the most full medical services, so every person could have the opportunity to receive qualitative medical help.</p>
+                            <div className="section-title">
+                                <span>INTRODUCING</span>
+                                <h2>Tackle the challenge of delivering health care</h2>
+                                <p className="about-text">We provide the most full medical services, so every person could have the opportunity to receive qualitative medical help.</p>
+                            </div>
                             <p>Our Clinic has grown to provide a world class facility for the treatment of tooth loss, dental cosmetics and bore advanced restorative dentistry. We are among the most qualified implant providers in the AUS with over 30 years of quality training and experience.</p>
                             <div className="d-flex about-footer">
                                 <div className="d-flex about-inner">
@@ -46,6 +49,7 @@ const About = () => {
                 </Row>
             </Container>
         </div>
+        // About Area End
     );
 };
 
