@@ -8,7 +8,7 @@ const Navigation = () => {
         // Navbar Start
         <Navbar expand="lg" sticky="top">
             <Container>
-                <Navbar.Brand href="#home">Athenity Care</Navbar.Brand>
+                <NavLink className="navbar-brand" to="/">Athenity Care</NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
@@ -18,6 +18,8 @@ const Navigation = () => {
                         <NavLink activeClassName="acitve" to="/team">our doctor</NavLink>
                         <NavLink activeClassName="acitve" to="/blog">blog</NavLink>
                         <NavLink activeClassName="acitve" to="/contact">contact us</NavLink>
+                        <NavLink activeClassName="acitve" to="/login">login</NavLink>
+                        <NavLink activeClassName="acitve" to="/signup">signup</NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

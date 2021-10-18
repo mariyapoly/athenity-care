@@ -2,6 +2,7 @@
 .navbar {
     padding: 25px 0;
     background-color: #fff;
+    box-shadow: 0px 13px 25px -12px rgba(0, 0 ,0,0.25);
 }
 .navbar .navbar-nav a {
     color: #033b4a;
@@ -19,11 +20,12 @@
 .navbar .navbar-nav a:hover {
     color: #00d6a3;
 }
-
-
 .navbar .navbar-brand {
     font-size: 30px;
     font-weight: 700;
+    color: #033b4a;
+}
+.navbar .navbar-brand:hover {
     color: #033b4a;
 }
 .navbar .navbar-nav .acitve {

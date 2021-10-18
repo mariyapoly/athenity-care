@@ -1,0 +1,203 @@
+/*--------- About Area Css -----------*/
+.about-area {
+    padding: 120px 0;
+}
+.about-container {
+    padding-left: 45px;
+}
+.about-container span {
+    color: #9dabaf;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.about-container h2 {
+    font-size: 35px;
+    font-weight: 600;
+    color: #033b4a;
+    line-height: 42px;
+    margin-bottom: 25px;
+}
+.about-container p {
+    line-height: 25px;
+    color: #9dabaf;
+}
+.about-text {
+    margin-bottom: 16px;
+}
+.about-footer {
+    margin-top: 40px;
+}
+.about-inner {
+    width: 33.33%;
+    align-items: center;
+}
+.about-inner p {
+    color: #033b4a;
+    font-size: 20px;
+    font-family: 'Saira', sans-serif;
+    font-weight: 600;
+    padding-right: 25px;
+}
+.about-icon {    
+    font-size: 25px;
+    margin-right: 20px;
+    color: #00d6a3;
+}
+.experience {
+    text-align: center;
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    background: #fff;
+    padding: 30px;
+    width: 240px;
+    box-shadow: 0px 0px 26px 16px rgba(240,238,238,0.75);
+    -webkit-box-shadow: 0px 0px 26px 16px rgba(240,238,238,0.75);
+    -moz-box-shadow: 0px 0px 26px 16px rgba(240,238,238,0.75);
+}
+.about-thumb {
+    position: relative;
+}
+.about-thumb  img {
+    box-shadow: 0px 0px 5px 0px rgba(240,238,238,0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(240,238,238,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(240,238,238,0.75);
+}
+.experience h2 {
+    color: #033b4a;
+    font-size: 70px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+.experience h2 span {
+    position: absolute;
+    top: -7px;
+    right: -20px;
+    font-size: 36px;
+    font-weight: 300;
+}
+.experience p {
+    font-size: 22px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #9dabaf;
+}
+
+
+
+
+/*--------- Media Query -----------*/
+@media only screen and (min-width:320px) and (max-width:575px) { 
+    .about-area {
+        padding: 80px 0 65px;
+    }
+    .about-thumb  {
+        margin-bottom: 40px;
+    }
+    .about-thumb  img {
+        width: 100%;
+    }
+    .experience {
+        display: none;
+    }
+    .about-container {
+        padding-left: 0;
+    }
+    .about-footer {
+        margin-top: 30px;
+        flex-direction: column;
+    }
+    .about-container h2 {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .about-inner{
+        width: auto;
+        margin-bottom: 15px;
+    }
+    .about-inner p {
+        font-size: 17px;
+        padding-right: 0;
+    }
+    .about-icon {
+        font-size: 20px;
+    }
+    
+}
+@media only screen and (min-width:576px) and (max-width:767px) { 
+    .about-area {
+        padding: 80px 0 65px;
+    }
+    .about-thumb  {
+        margin-bottom: 40px;
+    }
+    .about-thumb  img {
+        width: 100%;
+    }
+    .experience {
+        display: none;
+    }
+    .about-container {
+        padding-left: 0;
+    }
+    .about-footer {
+        margin-top: 30px;
+        flex-direction: column;
+    }
+    .about-container h2 {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .about-inner{
+        width: auto;
+        margin-bottom: 15px;
+    }
+    .about-inner p {
+        font-size: 17px;
+        padding-right: 0;
+    }
+    .about-icon {
+        font-size: 20px;
+    }
+    
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { 
+    .about-thumb {
+        margin-bottom: 40px;
+    }
+    .experience h2 {
+        font-size: 55px;
+    }
+    .experience p {
+        font-size: 18px;
+    }
+    .about-container {
+        padding-left: 0;
+    }
+    .about-inner p {
+        padding-right: 45px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1200px) { 
+    .about-thumb  img {
+        width: 100%;
+    }
+    .about-container {
+        padding-left: 0;
+    }
+    .about-inner p {
+        font-size: 17px;
+        padding-right: 0;
+        line-height: 1.2;
+    }
+    .about-icon {
+        font-size: 20px;
+        margin-right: 10px;
+        color: #00d6a3;
+    }
+}

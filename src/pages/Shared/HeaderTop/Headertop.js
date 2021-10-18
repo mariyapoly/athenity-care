@@ -3,10 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faClock } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faPinterestP, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { Col, Container, Row } from 'react-bootstrap';
-import './HeaderTop.css'
+import './HeaderTop.css';
+import { NavLink, useHistory } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 
 const Headertop = () => {
+
+    const historey = useHistory();
+
+    const handleAppoinment = () => {
+        historey.push("/login");
+    }
+
     return (
         // Header Top Start
         <div className="header-top">
@@ -21,12 +30,12 @@ const Headertop = () => {
                     <Col lg={4}>
                         <div className="d-flex align-items-center justify-content-end">
                             <div className="athenity-care-social-link">
-                                <FontAwesomeIcon className="social-icon" icon={faFacebookF} />
-                                <FontAwesomeIcon className="social-icon" icon={faTwitter} />
-                                <FontAwesomeIcon className="social-icon" icon={faPinterestP} />
-                                <FontAwesomeIcon className="social-icon" icon={faLinkedinIn} />
+                                <NavLink as={HashLink} to="#"><FontAwesomeIcon className="social-icon" icon={faFacebookF} /></NavLink>
+                                <NavLink as={HashLink} to="#"><FontAwesomeIcon className="social-icon" icon={faTwitter} /></NavLink>
+                                <NavLink as={HashLink} to="#"><FontAwesomeIcon className="social-icon" icon={faPinterestP} /></NavLink>
+                                <NavLink as={HashLink} to="#"><FontAwesomeIcon className="social-icon" icon={faLinkedinIn} /></NavLink>
                             </div>
-                            <button className="regular-btn">get a appoinment</button>
+                            <button onClick={handleAppoinment} className="regular-btn">get a appoinment</button>
                         </div>
                     </Col>
                 </Row>

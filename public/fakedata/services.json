@@ -34,5 +34,23 @@
         "serviceThumb": "https://i.ibb.co/5MM6029/department-img-8.jpg",
         "serviceName": "Children’s",
         "serviceDes": "We have five major divisions e.g. Paediatric Medicine, Paediatric Surgey& Anaesthesia and the Diagnostic Division."
+    },
+    {
+        "id": "service7",
+        "serviceThumb": "https://i.ibb.co/0KrLqwN/portfolio-image004.jpg",
+        "serviceName": "Dental Care",
+        "serviceDes": "We offers great t dental care including cosmetic and oral dental implants and emergency care."
+    },
+    {
+        "id": "service8",
+        "serviceThumb": "https://i.ibb.co/7t3YQdm/single-img-ten.jpg",
+        "serviceName": "Laboratory",
+        "serviceDes": "In our laboratory, You can pass wide range of the tests that allows us to put right the diagnosis tests."
+    },
+    {
+        "id": "service9",
+        "serviceThumb": "https://i.ibb.co/k9tV85B/single-one.jpg",
+        "serviceName": "Eye Care",
+        "serviceDes": "These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice."
     }
 ]
