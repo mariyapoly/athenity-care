@@ -97,7 +97,7 @@ h2.breadcrumb-title {
         justify-content: flex-start !important;
         align-items: flex-start !important;
     }
-    .breadcrumb-title,.single-service h2  {
+    h2.breadcrumb-title, .single-service h2  {
         font-size: 26px;
         margin-bottom: 15px;
     }

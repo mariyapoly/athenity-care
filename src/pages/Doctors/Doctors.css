@@ -1,3 +1,5 @@
+
+/*--------- Doctor Area css -----------*/
 .docters-area {
  padding: 110px 0;
 }
@@ -6,4 +8,33 @@
 }
 .docters-area .section-title  p {
     width: 800px;
+}
+
+
+/*--------- Media Query -----------*/
+
+@media only screen and (min-width:320px) and (max-width:575px) { 
+    .docters-area .section-title p {
+        width: auto;
+    }
+    .docters-area {
+        padding: 50px 0;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { 
+    .docters-area .section-title p {
+        width: auto;
+    }
+    .docters-area {
+        padding: 50px 0;
+    }
+    
+}
+@media only screen and (min-width:768px) and (max-width:991px) { 
+  
+    .docters-area .section-title  p {
+        width: 565px;
+    }
+    
 }

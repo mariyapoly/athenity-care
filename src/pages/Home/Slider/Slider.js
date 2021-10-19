@@ -11,7 +11,7 @@ const Slider = () => {
     const historey = useHistory();
 
     const handleAppoinment = () => {
-        historey.push("/login");
+        historey.push("/appointment");
     }
 
     return (

@@ -9,55 +9,62 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 
 const Login = () => {
-
+    // destuctruring allcontext
     const { allContext } = useAuth() || {};
-    const { signInUsignGoogle, signInFacebook, signInUsignGithub, handleUserLogIn, error, setError } = allContext || {};
+    const { signInUsignGoogle, signInFacebook, signInUsignGithub, handleUserLogIn, error, setError, setIsLoading } = allContext || {};
 
+    // form destuctruring
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const onSubmit = data => handleSignInEmailPass(data?.email, data?.password);
+
+    // use location and historey
     const location = useLocation();
     const historey = useHistory();
 
+    // function for handleSignInGoogle
     const handleSignInGoogle = () => {
         signInUsignGoogle()
             .then((result) => {
                 historey.push(location?.state.from)
                 setError('');
-            }).catch((error) => {
+            }).finally(() => setIsLoading(false))
+            .catch((error) => {
                 setError(error.message);
-            });
+            })
     }
+    // function for handleSignInFacebook
     const handleSignInFacebook = () => {
         signInFacebook()
             .then((result) => {
                 historey.push(location?.state.from)
                 setError('');
-            }).catch((error) => {
+            }).finally(() => setIsLoading(false))
+            .catch((error) => {
                 setError(error.message);
-            });
+            })
     }
+    // function for handleSignInGithub
     const handleSignInGithub = () => {
         signInUsignGithub()
             .then((result) => {
                 historey.push(location?.state.from)
                 setError('');
-            }).catch((error) => {
+            }).finally(() => setIsLoading(false))
+            .catch((error) => {
                 setError(error.message);
-            });
+            })
     }
+    // function for handleSignInEmailPass
     const handleSignInEmailPass = (email, password) => {
         handleUserLogIn(email, password)
             .then((result) => {
                 historey.push(location?.state.from)
                 setError('');
-            }).catch((error) => {
+            }).finally(() => setIsLoading(false))
+            .catch((error) => {
                 setError(error.message);
-            });
+            })
     }
-
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => handleSignInEmailPass(data.email, data.password);
-
-
-
 
     return (
         <div className="input-area">

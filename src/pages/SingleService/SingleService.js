@@ -25,8 +25,8 @@ const SingleService = ({ depeartment }) => {
                         <Breadcrumb>
                             <NavLink to="/home">Home</NavLink>
                             <span>/</span>
-                            <NavLink to={`/service/${id}`} activeClassName="active">
-                                Service
+                            <NavLink to={`/services/service/${id}`} activeClassName="active">
+                                {serviceName} Service
                             </NavLink>
                         </Breadcrumb>
                     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Breadcrumb, Container, Row } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import Service from '../Home/Service/Service';
 import './AllService.css'
@@ -11,20 +12,36 @@ const AllService = () => {
 
 
     return (
-        <div className="allservices-area service-area">
-            <Container>
-                <div className="section-title text-center">
-                    <span>OUR SERVICES</span>
-                    <h2>Special High-quality Services</h2>
-                    <p>Since its founding Brivona has been providing its patients with the full medical care, encompassing outpatients services, is neurology, laboratory, imaging diagnostics and more.</p>
-                </div>
-                <Row>
-                    {services.map(service => <Service
-                        key={service.id}
-                        service={service}></Service>)}
-                </Row>
-            </Container>
-        </div>
+        <>
+            <div className="breadcrumb-bg">
+                <Container>
+                    <div className="breadcrumb-container d-flex justify-content-between align-items-center">
+                        <h2 className="breadcrumb-title">Our All Service</h2>
+                        <Breadcrumb>
+                            <NavLink to="/home">Home</NavLink>
+                            <span>/</span>
+                            <NavLink to="/service" activeClassName="active">
+                                Services
+                            </NavLink>
+                        </Breadcrumb>
+                    </div>
+                </Container>
+            </div>
+            <div className="allservices-area service-area">
+                <Container>
+                    <div className="section-title text-center">
+                        <span>OUR SERVICES</span>
+                        <h2>Special High-quality Services</h2>
+                        <p>Since its founding Brivona has been providing its patients with the full medical care, encompassing outpatients services, is neurology, laboratory, imaging diagnostics and more.</p>
+                    </div>
+                    <Row>
+                        {services.map(service => <Service
+                            key={service.id}
+                            service={service}></Service>)}
+                    </Row>
+                </Container>
+            </div>
+        </>
     );
 };
 

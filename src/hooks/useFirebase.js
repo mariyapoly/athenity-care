@@ -10,23 +10,22 @@ const useFirebase = () => {
     // declear state
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(true);
 
     const auth = getAuth();
 
     // handle signin google
     const signInUsignGoogle = () => {
-
+        setIsLoading(true)
         const googleProvider = new GoogleAuthProvider();
-
         return signInWithPopup(auth, googleProvider)
 
 
     }
     // handle signin facebook
     const signInFacebook = () => {
-
+        setIsLoading(true)
         const facebookProvider = new FacebookAuthProvider();
-
         return signInWithPopup(auth, facebookProvider)
 
     }
@@ -34,6 +33,7 @@ const useFirebase = () => {
     // handle github sign in
 
     const signInUsignGithub = () => {
+        setIsLoading(true)
         const githubProvider = new GithubAuthProvider();
         return signInWithPopup(auth, githubProvider)
 
@@ -41,6 +41,7 @@ const useFirebase = () => {
 
     // signin email password
     const handleUserLogIn = (email, password) => {
+        setIsLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
 
     }
@@ -66,23 +67,26 @@ const useFirebase = () => {
 
     // observe user state changed
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
             }
+            setIsLoading(false)
         });
+
+        return () => unsubscribed;
 
     }, [])
 
     // handle logout user
     const logOut = () => {
-
+        setIsLoading(true)
         signOut(auth).then(() => {
             setUser({});
             setError('');
         }).catch((error) => {
             setError(error.message);
-        });
+        }).finally(() => setIsLoading(false))
 
     }
 
@@ -96,6 +100,8 @@ const useFirebase = () => {
         logOut,
         setUser,
         setError,
+        isLoading,
+        setIsLoading,
         user,
         error
     }
