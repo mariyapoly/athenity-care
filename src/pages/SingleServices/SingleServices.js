@@ -11,17 +11,7 @@ const SingleServices = () => {
     const { allService } = useAuth() || {};
     const { services } = allService || {};
 
-    // const [servicess, setServicess] = useState([]);
-
-    // useEffect(() => {
-    //     fetch('./fakedata/services.json')
-    //         .then(res => res.json())
-    //         .then(data => setServicess(data))
-    // }, [])
-
     const depeartment = services.find(dp => dp?.id === id);
-
-    console.log(depeartment)
 
     return (
         <div>

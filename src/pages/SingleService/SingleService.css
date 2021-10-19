@@ -27,7 +27,9 @@ h2.breadcrumb-title {
     color: #fff;
     text-decoration: none;
     margin-left: 10px;
+    text-transform: capitalize;
 }
+
 .breadcrumb .active {
     color: #00d6a3;
 }
