@@ -4,6 +4,7 @@ import './CopyRight.css'
 
 const CopyRight = () => {
     return (
+        // copyrright start
         <div className="copyright">
             <Container>
                 <Row>
@@ -13,6 +14,7 @@ const CopyRight = () => {
                 </Row>
             </Container>
         </div>
+        // copyright end
     );
 };
 

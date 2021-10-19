@@ -3,6 +3,16 @@
 .input-area {
     padding: 80px 0;
 }
+.success-message {
+    background: #00d6a3;
+    color: #fff;
+    padding: 20px;
+    width: 240px;
+    font-size: 19px;
+    text-align: center;
+    margin: 0 auto 25px;
+    font-weight: 500;
+}
 .form-field {
     width: 500px;
     margin: 0 auto;

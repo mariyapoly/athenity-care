@@ -1,3 +1,4 @@
+/*--------- service area css -----------*/
 .service-area {
     background: #f9fafa;
     padding: 120px 0 90px;
@@ -29,7 +30,7 @@
 }
 .service-container {
     background-color: #fff;
-    padding: 23px 65px 30px 30px;
+    padding: 23px 11px 30px 20px;
 }
 .service-container h4 {
     color: #033b4a;
@@ -51,9 +52,7 @@
     font-weight: 600;
 }
 
-
-
-
+/*--------- Media Query -----------*/
 @media only screen and (min-width:320px) and (max-width:575px) { 
     .service-area {
         padding: 80px 0 50px; 

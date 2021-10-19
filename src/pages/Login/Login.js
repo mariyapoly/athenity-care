@@ -11,7 +11,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 const Login = () => {
     // destuctruring allcontext
     const { allContext } = useAuth() || {};
-    const { signInUsignGoogle, signInFacebook, signInUsignGithub, handleUserLogIn, error, setError, setIsLoading } = allContext || {};
+    const { signInUsignGoogle, signInFacebook, signInUsignGithub, handleUserLogIn, error, setError, setIsLoading, user } = allContext || {};
 
     // form destuctruring
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -62,13 +62,16 @@ const Login = () => {
                 setError('');
             }).finally(() => setIsLoading(false))
             .catch((error) => {
-                setError(error.message);
             })
     }
 
     return (
+        // login input and other start
         <div className="input-area">
             <Container>
+                {
+                    user.email && <p className="success-message">Log In successfull</p>
+                }
                 <Row>
                     <div className="form-field">
 
@@ -78,7 +81,7 @@ const Login = () => {
                             {errors.email && <span>This field is required</span>}
                             <input type="password" placeholder="Password" {...register("password")} />
                             <span className="error">{error}</span>
-                            <input className="regular-btn" type="Submit" />
+                            <input className="regular-btn" type="Submit" value="Log In" />
                         </form>
                         <NavLink to="/signup">Create a new account</NavLink>
                         <p>or use one of these options</p>
@@ -93,6 +96,7 @@ const Login = () => {
                 </Row>
             </Container>
         </div>
+        // login input and other end
     );
 };
 

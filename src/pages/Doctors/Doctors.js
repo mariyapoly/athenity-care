@@ -12,6 +12,7 @@ const Doctors = () => {
     const ourDoctors = doctores.slice(0, 3);
 
     return (
+        // doctor area start
         <div className='docters-area'>
             <Container>
                 <Row>
@@ -28,6 +29,7 @@ const Doctors = () => {
                 </Row>
             </Container>
         </div>
+        // doctor area end
     );
 };
 

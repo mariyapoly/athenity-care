@@ -13,6 +13,7 @@ const AllService = () => {
 
     return (
         <>
+            {/* breadcrumb start */}
             <div className="breadcrumb-bg">
                 <Container>
                     <div className="breadcrumb-container d-flex justify-content-between align-items-center">
@@ -27,6 +28,8 @@ const AllService = () => {
                     </div>
                 </Container>
             </div>
+            {/* breadcrumb end */}
+            {/* allservices-area start */}
             <div className="allservices-area service-area">
                 <Container>
                     <div className="section-title text-center">
@@ -41,6 +44,7 @@ const AllService = () => {
                     </Row>
                 </Container>
             </div>
+            {/* allservices-area end */}
         </>
     );
 };

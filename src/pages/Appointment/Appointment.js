@@ -1,12 +1,10 @@
 import React from 'react';
-import { Breadcrumb, Col, Container, Row, Spinner } from 'react-bootstrap';
+import { Breadcrumb, Col, Container, Row } from 'react-bootstrap';
 import { NavLink, useHistory } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
 import './Appointment.css'
 
 const Appointment = () => {
-
-
+    // declear use history
     const historey = useHistory();
     const handleContactBtn = () => {
         historey.push("/contact")
@@ -30,6 +28,7 @@ const Appointment = () => {
                 </Container>
             </div>
             {/* breadcrumb end */}
+            {/* appoinmtment start */}
             <div>
                 <Container>
                     <Row className="bg-shadow">
@@ -83,6 +82,7 @@ const Appointment = () => {
                     </Row>
                 </Container>
             </div>
+            {/* appoinmtment end */}
         </>
     );
 };

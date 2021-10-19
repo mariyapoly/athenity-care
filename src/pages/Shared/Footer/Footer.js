@@ -6,6 +6,7 @@ import './Footer.css'
 
 const Footer = () => {
     return (
+        // footer start
         <>
             <div className="footer">
                 <Container>
@@ -52,6 +53,7 @@ const Footer = () => {
             </div>
             <CopyRight></CopyRight>
         </>
+        // footer end
     );
 };
 

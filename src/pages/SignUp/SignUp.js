@@ -7,17 +7,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const SignUp = () => {
-
+    // destuctruring allcontext
     const { allContext } = useAuth() || {};
-    const { signInUsignGoogle, signInFacebook, signInUsignGithub, error, handleCreateNewUser } = allContext || {};
+    const { signInUsignGoogle, signInFacebook, signInUsignGithub, error, handleCreateNewUser, user } = allContext || {};
+    // form destuctruring
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => handleCreateNewUser(data.email, data.password, data.name);
 
-
-
     return (
+        // signup input and other start
         <div className="input-area">
             <Container>
+                {
+                    user.email && <p className="success-message">Sign up successfull</p>
+                }
                 <Row>
                     <div className="form-field">
                         <h2>Sign up</h2>
@@ -28,7 +31,7 @@ const SignUp = () => {
                             <input type="password" placeholder="password" {...register("password")} />
 
                             <span className="error">{error}</span>
-                            <input className="regular-btn" type="Submit" />
+                            <input className="regular-btn" type="Submit" value="Sign Up" />
                         </form>
                         <NavLink to="/login">Already have an account</NavLink>
                         <p>or use one of these options</p>
@@ -43,6 +46,7 @@ const SignUp = () => {
                 </Row>
             </Container>
         </div>
+        // signup input and other end
     );
 };
 
