@@ -10,7 +10,7 @@ const Service = ({ service }) => {
     const historey = useHistory();
 
     const handleService = () => {
-        historey.push(`/service/${id}`)
+        historey.push(`/services/service/${id}`)
     }
 
     return (

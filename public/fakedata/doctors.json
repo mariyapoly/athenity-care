@@ -1,0 +1,38 @@
+[
+    {
+        "id": "doctor1",
+        "doctorThumb": "https://i.ibb.co/gP3qm7v/doctor-img-1.jpg",
+        "doctorName": "Dr. Rony K",
+        "role": "Cardiology"
+    },
+    {
+        "id": "doctor2",
+        "doctorThumb": "https://i.ibb.co/XFkhKSK/doctor-img-2.jpg",
+        "doctorName": "Dr. Eva A",
+        "role": "Neurology"
+    },
+    {
+        "id": "doctor3",
+        "doctorThumb": "https://i.ibb.co/d2csWsp/doctor-img-3.jpg",
+        "doctorName": "Dr. Sonia K",
+        "role": "Urology"
+    },
+    {
+        "id": "doctor4",
+        "doctorThumb": "https://i.ibb.co/W51xpj0/doctor-img-4.jpg",
+        "doctorName": "Dr. Fillmore E",
+        "role": "Body Surgery"
+    },
+    {
+        "id": "doctor5",
+        "doctorThumb": "https://i.ibb.co/1XTjrkb/doctor-img-5.jpg",
+        "doctorName": "Dr. Danielle L",
+        "role": "Value Diseases"
+    },
+    {
+        "id": "doctor6",
+        "doctorThumb": "https://i.ibb.co/c1yrmmf/doctor-img-6.jpg",
+        "doctorName": "Dr. David C",
+        "role": "Children’s"
+    }
+]

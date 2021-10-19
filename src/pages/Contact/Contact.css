@@ -1,0 +1,58 @@
+.contact-area {
+    padding: 80px 0;
+}
+.single-contact {
+    background: #fff;
+    box-shadow: 0px 0px 26px 16px rgb(240 238 238 / 75%);
+    -webkit-box-shadow: 0px 0px 26px 16px rgb(240 238 238 / 75%);
+    -moz-box-shadow: 0px 0px 26px 16px rgba(240,238,238,0.75);
+    text-align: center;
+    padding: 35px 74px;
+}
+.contact-icon {
+    font-size: 38px;
+    color: #fff;
+}
+.single-contact p {
+    font-size: 18px;
+    color: #9dabaf;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 28px;
+}
+p.contact {
+    width: 90px;
+    height: 90px;
+    background: #00d6a3;
+    line-height: 107px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.single-contact h3 {
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #033b4a;
+}
+.contact-feild {
+    margin: 30px 0 100px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+}
+.contact-thumb img {
+    width: 100%;
+}
+.contact-form input {
+    width: 47%;
+    margin: 0 11px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+.contact-form textarea {
+    width: 97%;
+    margin: 0 11px;
+    margin-bottom: 11px;
+    padding: 10px 15px;
+    resize: none;
+    height: 120px;
+}

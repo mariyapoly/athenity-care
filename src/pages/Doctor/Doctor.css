@@ -1,0 +1,43 @@
+.single-Doctor img {
+    width: 100%;
+}
+.single-Doctor {
+    padding: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+}
+.single-Doctor:hover {
+    background: #00d6a3;
+}
+.single-Doctor p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    color: #9dabaf;
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+}
+.single-Doctor:hover p,
+.single-Doctor:hover h5
+{
+    color: #fff;
+}
+.single-Doctor h5 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #033b4a;
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+}

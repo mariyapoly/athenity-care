@@ -69,3 +69,11 @@ button.signin-btn {
 button.signin-btn svg {
     fill: #4267b2;
 }
+.github-icon {
+    font-size: 26px;
+    color: #033b4a;
+    margin-top: -7px;
+}
+.error {
+    color: rgb(194, 23, 23);
+}

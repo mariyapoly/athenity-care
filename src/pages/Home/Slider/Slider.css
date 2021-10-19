@@ -2,7 +2,10 @@
 .carousel-item {
     height: 700px;
 }
-.carousel-item::before {
+.overlay{
+    position: relative;
+}
+.overlay::before {
     position: absolute;
     content: '';
     top: 0;

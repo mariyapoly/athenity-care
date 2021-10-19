@@ -2,6 +2,7 @@ import React from 'react';
 import { Breadcrumb, Col, Container, Row } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './SingleService.css';
+import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,12 +11,17 @@ const SingleService = ({ depeartment }) => {
 
     const { id, serviceDes, serviceName, serviceThumb } = depeartment || {};
 
+    const history = useHistory();
+    const handleAppointmentBtn = () => {
+        history.push("/appointment");
+    }
+
     return (
         <div>
             <div className="breadcrumb-bg">
                 <Container>
                     <div className="breadcrumb-container d-flex justify-content-between align-items-center">
-                        <h2 className="breadcrumb-title">{serviceName} Services</h2>
+                        <h2 className="breadcrumb-title">{serviceName} Service</h2>
                         <Breadcrumb>
                             <NavLink to="/home">Home</NavLink>
                             <span>/</span>
@@ -45,7 +51,7 @@ const SingleService = ({ depeartment }) => {
                                 <li><FontAwesomeIcon icon={faCheck} className="check-icon" />Treating diseases</li>
                                 <li><FontAwesomeIcon icon={faCheck} className="check-icon" />Providing for a good end of life</li>
                             </ul>
-                            <button className="regular-btn">make an Appointment</button>
+                            <button onClick={handleAppointmentBtn} className="regular-btn">make an Appointment</button>
                         </Col>
                     </Row>
                 </Container>

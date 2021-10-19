@@ -3,11 +3,13 @@ import { Container, Row } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const SignUp = () => {
 
     const { allContext } = useAuth() || {};
-    const { signInUsignGoogle, signInFacebook, logOut, user, error, handleCreateNewUser } = allContext || {};
+    const { signInUsignGoogle, signInFacebook, signInUsignGithub, error, handleCreateNewUser } = allContext || {};
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => handleCreateNewUser(data.email, data.password, data.name);
 
@@ -19,12 +21,13 @@ const SignUp = () => {
                 <Row>
                     <div className="form-field">
                         <h2>Sign up</h2>
-                        <span>{error}</span>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input type="text" placeholder="Name" {...register("name")} />
                             <input type="email" placeholder="Your Email" {...register("email", { required: true })} />
-                            {errors.exampleRequired && <span>This field is required</span>}
+                            {errors.email && <span>This field is required</span>}
                             <input type="password" placeholder="password" {...register("password")} />
+
+                            <span className="error">{error}</span>
                             <input className="regular-btn" type="Submit" />
                         </form>
                         <NavLink to="/login">Already have an account</NavLink>
@@ -35,6 +38,7 @@ const SignUp = () => {
                         <button className="signin-btn" onClick={signInFacebook}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="img"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"></path></svg>
                         </button>
+                        <button className="signin-btn" onClick={signInUsignGithub}><FontAwesomeIcon className="github-icon" icon={faGithub} /></button>
                     </div>
                 </Row>
             </Container>

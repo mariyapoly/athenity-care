@@ -1,5 +1,5 @@
 
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, FacebookAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, FacebookAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, GithubAuthProvider } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../firebase/firebase.init";
 
@@ -18,13 +18,8 @@ const useFirebase = () => {
 
         const googleProvider = new GoogleAuthProvider();
 
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                setUser(result.user);
-                setError('');
-            }).catch((error) => {
-                setError(error.message);
-            });
+        return signInWithPopup(auth, googleProvider)
+
 
     }
     // handle signin facebook
@@ -32,25 +27,22 @@ const useFirebase = () => {
 
         const facebookProvider = new FacebookAuthProvider();
 
-        signInWithPopup(auth, facebookProvider)
-            .then((result) => {
-                setUser(result.user);
-                setError('');
-            }).catch((error) => {
-                setError(error.message);
-            });
+        return signInWithPopup(auth, facebookProvider)
+
+    }
+
+    // handle github sign in
+
+    const signInUsignGithub = () => {
+        const githubProvider = new GithubAuthProvider();
+        return signInWithPopup(auth, githubProvider)
+
     }
 
     // signin email password
     const handleUserLogIn = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
-            .then((result) => {
-                setUser(result.user);
-                setError('');
-            })
-            .catch((error) => {
-                setError(error.message);
-            });
+        return signInWithEmailAndPassword(auth, email, password)
+
     }
 
     // create new user email password
@@ -98,9 +90,12 @@ const useFirebase = () => {
     return {
         signInUsignGoogle,
         signInFacebook,
+        signInUsignGithub,
         handleCreateNewUser,
         handleUserLogIn,
         logOut,
+        setUser,
+        setError,
         user,
         error
     }

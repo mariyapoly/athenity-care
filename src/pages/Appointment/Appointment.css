@@ -1,0 +1,71 @@
+.bg-shadow {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+    margin: 80px 0;
+}
+.appoinmtment-left {
+    padding: 60px 10px;
+    background: #fff;
+}
+.dept-select, .doctor-select {
+    width: 42%;
+    margin: 12px 10px;
+}
+.appoinmtment-left h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #033b4a;
+    margin-bottom: 25px;
+}
+
+.appoinmtment-left select {
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.appoinmtment-left input {
+    width: 42%;
+    padding: 10px 15px;
+    margin: 12px 10px;
+}
+
+.appoinmtment-left textarea {
+    width: 87%;
+    margin: 12px 10px;
+    resize: none;
+    padding: 12px 15px;
+    height: 100px;
+}
+
+.appoinmtment-right {
+    background: url(../../images/appointment.jpg) no-repeat center;
+    background-size: cover;
+    padding: 154px 60px;
+}
+.appoinmtment-right.overlay:before {
+    z-index: -1;
+}
+.appoinmtment-pr {
+    padding-right: 0;
+}
+.appoinmtment-right.overlay {
+    z-index: 1;
+}
+.appoinmtment-right h4 {
+    color: #ffff;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.appoinmtment-right h2 {
+    color: #fff;
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.appoinmtment-right p {
+    color: #fff;
+    line-height: 28px;
+    font-size: 18px;
+    width: 450px;
+    margin-bottom: 40px;
+}
+

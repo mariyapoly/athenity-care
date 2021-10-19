@@ -17,7 +17,7 @@ const Slider = () => {
     return (
         // Banner Area Start
         <Carousel>
-            <Carousel.Item>
+            <Carousel.Item className="overlay">
                 <img
                     className="d-block w-100"
                     src={sliderImg1}
@@ -29,7 +29,7 @@ const Slider = () => {
                     <button onClick={handleAppoinment} className="regular-btn">make an Appointment</button>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item>
+            <Carousel.Item className="overlay">
                 <img
                     className="d-block w-100"
                     src={sliderImg2}
@@ -42,7 +42,7 @@ const Slider = () => {
                     <button onClick={handleAppoinment} className="regular-btn">make an Appointment</button>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item>
+            <Carousel.Item className="overlay">
                 <img
                     className="d-block w-100"
                     src={sliderImg3}
