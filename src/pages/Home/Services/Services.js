@@ -12,6 +12,7 @@ const Services = () => {
     const allServices = services.slice(0, 6)
 
     return (
+        // service area start
         <div className="service-area">
             <Container>
                 <Row>
@@ -30,6 +31,7 @@ const Services = () => {
                 </Row>
             </Container>
         </div>
+        // service area end
     );
 };
 

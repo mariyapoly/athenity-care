@@ -9,6 +9,7 @@ import './CounterUp.css'
 
 const CounterUp = () => {
     return (
+        // counter area start
         <div className="counter-bg">
             <Container>
                 <Row>
@@ -42,8 +43,8 @@ const CounterUp = () => {
                     </Col>
                 </Row>
             </Container>
-
         </div>
+        // counter area end
     );
 };
 

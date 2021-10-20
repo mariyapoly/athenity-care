@@ -12,6 +12,7 @@ const NotFound = () => {
 
     return (
         <>
+            {/* breadcrumb-bg start */}
             <div className="breadcrumb-bg">
                 <Container>
                     <div className="breadcrumb-container d-flex justify-content-between align-items-center">
@@ -26,6 +27,8 @@ const NotFound = () => {
                     </div>
                 </Container>
             </div>
+            {/* breadcrumb-bg end */}
+            {/* notfound start */}
             <div>
                 <Container>
                     <Row>
@@ -40,6 +43,7 @@ const NotFound = () => {
                     </Row>
                 </Container>
             </div>
+            {/* notfound end */}
         </>
     );
 };

@@ -13,6 +13,7 @@ const AllDoctor = () => {
 
     return (
         <>
+            {/* breadcrumb area strart */}
             <div className="breadcrumb-bg">
                 <Container>
                     <div className="breadcrumb-container d-flex justify-content-between align-items-center">
@@ -27,6 +28,8 @@ const AllDoctor = () => {
                     </div>
                 </Container>
             </div>
+            {/* breadcrumb area end */}
+            {/* doctor area strart */}
             <div className="doctor-area">
                 <Container>
                     <Row>
@@ -38,6 +41,7 @@ const AllDoctor = () => {
                     </Row>
                 </Container>
             </div>
+            {/* doctor area end */}
         </>
     );
 };

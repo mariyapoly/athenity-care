@@ -57,7 +57,7 @@ const SignUp = () => {
             })
             .finally(() => setIsLoading(false))
     }
-    // function for handleSignInEmailPass
+    // function for handleSignUpEmailPass
     const handleSignUpEmailPass = (email, password, name) => {
         handleCreateNewUser(email, password)
             .then((result) => {

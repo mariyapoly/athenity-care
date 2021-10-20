@@ -6,6 +6,7 @@ import About from '../Home/About/About';
 const AboutUs = () => {
     return (
         <>
+            {/* breadcrumb area strart */}
             <div className="breadcrumb-bg">
                 <Container>
                     <div className="breadcrumb-container d-flex justify-content-between align-items-center">
@@ -20,6 +21,7 @@ const AboutUs = () => {
                     </div>
                 </Container>
             </div>
+            {/* breadcrumb area end */}
             <About></About>
         </>
     );

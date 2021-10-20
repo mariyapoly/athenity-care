@@ -18,6 +18,7 @@ const SingleService = ({ depeartment }) => {
 
     return (
         <div>
+            {/*breadcrumb-bg start */}
             <div className="breadcrumb-bg">
                 <Container>
                     <div className="breadcrumb-container d-flex justify-content-between align-items-center">
@@ -32,6 +33,8 @@ const SingleService = ({ depeartment }) => {
                     </div>
                 </Container>
             </div>
+            {/* breadcrumb-bg end */}
+            {/* single-service start */}
             <div className="single-service">
                 <Container>
                     <Row className="align-items-center">
@@ -56,6 +59,7 @@ const SingleService = ({ depeartment }) => {
                     </Row>
                 </Container>
             </div>
+            {/* single-service end */}
         </div>
     );
 };
