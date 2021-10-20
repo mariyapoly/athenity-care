@@ -57,7 +57,7 @@
 }
 .single-Doctor:hover p,
 .single-Doctor:hover h5,
-.single-Doctor button
+.single-Doctor:hover button
 {
     color: #fff;
 }
