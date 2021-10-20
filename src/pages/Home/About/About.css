@@ -35,14 +35,14 @@
 }
 .about-inner p {
     color: #033b4a;
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'Saira', sans-serif;
     font-weight: 600;
     padding-right: 25px;
 }
 .about-icon {    
     font-size: 25px;
-    margin-right: 20px;
+    margin-right: 15px;
     color: #00d6a3;
 }
 .experience {
