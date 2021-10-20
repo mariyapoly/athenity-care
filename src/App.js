@@ -15,6 +15,7 @@ import AboutUs from './pages/AboutUs/AboutUs';
 import AllService from './pages/AllService/AllService';
 import AllDoctor from './pages/AllDoctor/AllDoctor';
 import Contact from './pages/Contact/Contact';
+import SingleDoctors from './pages/SingleDoctors/SingleDoctors';
 
 function App() {
   return (
@@ -51,6 +52,9 @@ function App() {
           </Route>
           <PrivateRoute path="/appointment">
             <Appointment></Appointment>
+          </PrivateRoute>
+          <PrivateRoute path="/doctors/doctor/:id">
+            <SingleDoctors></SingleDoctors>
           </PrivateRoute>
           <Route path="*">
             <NotFound></NotFound>

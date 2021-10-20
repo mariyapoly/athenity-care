@@ -27,11 +27,16 @@
     -ms-transition: all linear 0.5s;
     -o-transition: all linear 0.5s;
 }
-.single-Doctor:hover p,
-.single-Doctor:hover h5
-{
-    color: #fff;
+.single-Doctor button {
+    border: 0;
+    background: no-repeat;
+    text-transform: uppercase;
+    color: #00d6a3;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
 }
+
 .single-Doctor h5 {
     font-size: 22px;
     font-weight: 600;
@@ -41,4 +46,18 @@
     -moz-transition: all linear 0.5s;
     -ms-transition: all linear 0.5s;
     -o-transition: all linear 0.5s;
+}
+.service-container button {
+    border: 0;
+    background: no-repeat;
+    text-transform: uppercase;
+    color: #00d6a3;
+    font-size: 15px;
+    font-weight: 600;
+}
+.single-Doctor:hover p,
+.single-Doctor:hover h5,
+.single-Doctor button
+{
+    color: #fff;
 }

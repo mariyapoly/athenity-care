@@ -1,0 +1,32 @@
+/*--------- doctor css -----------*/
+.doctor-details p {
+    margin: 11px 0px;
+    font-size: 18px;
+}
+.doctor-icon {
+    font-size: 25px;
+    margin: 41px 20px;
+    color: #033b4a;
+}
+
+/*--------- Media Query -----------*/
+@media only screen and (max-width:575px) {
+    .doctor-details p {
+        margin: 8px 0px;
+        font-size: 14px;
+    }
+    .doctor-icon {
+        font-size: 19px;
+        margin: 31px 14px;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width:767px) {
+    .doctor-details p {
+        margin: 8px 0px;
+        font-size: 15px;
+    }
+    .doctor-icon {
+        font-size: 19px;
+        margin: 31px 14px;
+    }
+}
