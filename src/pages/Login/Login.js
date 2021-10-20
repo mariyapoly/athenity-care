@@ -11,7 +11,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 const Login = () => {
     // destuctruring allcontext
     const { allContext } = useAuth() || {};
-    const { signInUsignGoogle, signInFacebook, signInUsignGithub, handleUserLogIn, error, setError, setIsLoading, user } = allContext || {};
+    const { signInUsignGoogle, signInFacebook, signInUsignGithub, handleUserLogIn, error, setError, setIsLoading } = allContext || {};
 
     // form destuctruring
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -19,59 +19,64 @@ const Login = () => {
 
     // use location and historey
     const location = useLocation();
-    const historey = useHistory();
+    const history = useHistory();
+    const redirect_url = location?.state?.from || "/";
 
     // function for handleSignInGoogle
     const handleSignInGoogle = () => {
         signInUsignGoogle()
             .then((result) => {
-                historey.push(location?.state.from)
+                history.push(redirect_url)
                 setError('');
-            }).finally(() => setIsLoading(false))
+            })
             .catch((error) => {
                 setError(error.message);
             })
+            .finally(() => setIsLoading(false))
+
+
     }
     // function for handleSignInFacebook
     const handleSignInFacebook = () => {
         signInFacebook()
             .then((result) => {
-                historey.push(location?.state.from)
+                history.push(redirect_url)
                 setError('');
-            }).finally(() => setIsLoading(false))
+            })
             .catch((error) => {
                 setError(error.message);
             })
+            .finally(() => setIsLoading(false))
     }
     // function for handleSignInGithub
     const handleSignInGithub = () => {
         signInUsignGithub()
             .then((result) => {
-                historey.push(location?.state.from)
+                history.push(redirect_url)
                 setError('');
-            }).finally(() => setIsLoading(false))
+            })
             .catch((error) => {
                 setError(error.message);
             })
+            .finally(() => setIsLoading(false))
     }
     // function for handleSignInEmailPass
     const handleSignInEmailPass = (email, password) => {
         handleUserLogIn(email, password)
             .then((result) => {
-                historey.push(location?.state.from)
+                history.push(redirect_url)
                 setError('');
-            }).finally(() => setIsLoading(false))
-            .catch((error) => {
             })
+            .catch((error) => {
+                setError(error.message);
+            })
+            .finally(() => setIsLoading(false))
     }
 
     return (
         // login input and other start
         <div className="input-area">
             <Container>
-                {
-                    user.email && <p className="success-message">Log In successfull</p>
-                }
                 <Row>
                     <div className="form-field">
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Breadcrumb, Container, Row } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import CounterUp from '../Home/CounterUp/CounterUp';
 import Service from '../Home/Service/Service';
 import './AllService.css'
 
@@ -45,6 +46,7 @@ const AllService = () => {
                 </Container>
             </div>
             {/* allservices-area end */}
+            <CounterUp></CounterUp>
         </>
     );
 };

@@ -1,0 +1,60 @@
+
+/*--------- counter css -----------*/
+.counter-bg {
+    background: #00d6a3;
+    padding: 100px 0 70px;
+}
+.single-counter {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.count-icon {
+    font-size: 40px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+.single-counter span {
+    font-size: 55px;
+    font-weight: 500;
+}
+.single-counter p {
+    font-size: 22px;
+    margin-top: -10px;
+}
+
+/*--------- Media Query -----------*/
+@media only screen and (max-width:575px) {
+    .counter-bg {
+        padding: 60px 0 30px;
+    }
+    .count-icon {
+        font-size: 30px;
+    }
+    .single-counter span {
+        font-size: 43px;
+    }
+    .single-counter p {
+        font-size: 18px;
+        margin-top: -10px;
+    }
+}
+@media only screen and (min-width:576px) and (max-width:767px) {
+    .counter-bg {
+        padding: 60px 0 30px;
+    }
+    .count-icon {
+        font-size: 30px;
+    }
+    .single-counter span {
+        font-size: 43px;
+    }
+    .single-counter p {
+        font-size: 18px;
+        margin-top: -10px;
+    }
+}
+
+

@@ -25,7 +25,7 @@ const Navigation = () => {
                         <NavLink activeClassName="acitve" to="/doctor">our doctor</NavLink>
                         <NavLink activeClassName="acitve" to="/contact">contact us</NavLink>
                         {
-                            user.email && user.displayName ? <div><span className="name">{user.displayName}</span> <button className="logout-btn" onClick={logOut}>logout</button></div>
+                            user.email ? <div><span className="name">{user.displayName}</span> <button className="logout-btn" onClick={logOut}>logout</button></div>
                                 :
                                 <NavLink activeClassName="acitve" to="/login">login</NavLink>
                         }

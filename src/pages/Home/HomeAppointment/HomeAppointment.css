@@ -1,0 +1,65 @@
+.home-appointment  {
+    background: url(../../../images/breadcrumb-bg.png) no-repeat center;
+    background-position: cover;
+    padding: 80px 0;
+    text-align: center;
+    z-index: 1;
+}
+.home-appointment.overlay::before {
+    z-index: -1;
+    opacity: 0.95;
+}
+.home-appointment h4 {
+    color: #00d6a3;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.home-appointment h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.home-appointment h3 {
+    color: #fff;
+    margin-bottom: 55px;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+/*--------- Media Query -----------*/
+@media only screen and (max-width:575px) {
+    .home-appointment  {
+        padding: 65px 0 70px;
+    }
+    .home-appointment h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .home-appointment h2 {
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+    .home-appointment h3 {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (min-width:576px) and (max-width:767px) {
+    .home-appointment  {
+        padding: 65px 0 70px;
+    }
+    .home-appointment h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .home-appointment h2 {
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+    .home-appointment h3 {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+}

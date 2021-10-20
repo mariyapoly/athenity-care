@@ -47,16 +47,9 @@ const useFirebase = () => {
     }
 
     // create new user email password
-    const handleCreateNewUser = (email, password, name) => {
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((result) => {
-                setUser(result.user);
-                setError('');
-                setUserName(name);
-            })
-            .catch((error) => {
-                setError(error.message);
-            });
+    const handleCreateNewUser = (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password)
+
     }
     // set user Nmae
     const setUserName = (name) => {
@@ -104,6 +97,7 @@ const useFirebase = () => {
         isLoading,
         setIsLoading,
         user,
+        setUserName,
         error
     }
 

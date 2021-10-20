@@ -92,7 +92,7 @@ button.signin-btn svg {
 
 
 /*--------- Media Query -----------*/
-@media only screen and (min-width:320px) and (max-width:575px) { 
+@media only screen and (max-width:575px) {
     .form-field {
         padding-top: 50px;
     }

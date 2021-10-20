@@ -1,18 +1,16 @@
+/*--------- service area css -----------*/
 .service-area .section-title p {
     width: 735px;
     margin: 0 auto;
     margin-bottom: 50px;
 }
 
-
-
-@media only screen and (min-width:320px) and (max-width:575px) { 
-    
+/*--------- Media Query -----------*/
+@media only screen and (max-width:575px) {
     .service-area .section-title p {
         width: auto;
     }
 }
-
 @media only screen and (min-width:576px) and (max-width:767px) { 
     
     .service-area .section-title p {
